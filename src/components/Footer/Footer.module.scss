@@ -1,0 +1,63 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    height: 20rem;
+    padding: 1rem 2rem;
+
+    border-top: 2px solid white;
+
+
+    .footer-blur1 {
+        right: 15%;
+        width: 26rem;
+        height: 12rem;
+        filter: blur(200px);
+        background-color: red;
+    }
+
+    .footer-blur2 {
+        left: 0;
+        width: 26rem;
+        height: 12rem;
+        filter: blur(200px);
+        background-color: rgb(255, 115, 0);
+    }
+
+    img {
+        width: 10rem;
+    }
+
+
+    .links {
+        display: flex;
+        gap: 4rem;
+
+        img {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: (726px)) {
+    .footer {
+        height: 10rem;
+        gap: 2rem;
+
+        img {
+            width: 10rem;
+        }
+
+        .links {
+            gap: 3rem;
+
+            img {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+    }
+}

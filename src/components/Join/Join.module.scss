@@ -1,0 +1,66 @@
+@import '../../scss/vars';
+
+.join {
+    display: flex;
+    padding: 0 2rem;
+    gap: 10rem;
+
+    .join_left {
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: relative;
+
+        hr {
+            position: absolute;
+            width: 10.5rem;
+            border: 2px solid $orange;
+            border-radius: 20%;
+            margin: -10px 0;
+        }
+    }
+
+    .join_right {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        .email {
+            display: flex;
+            gap: 3rem;
+            padding: 1rem 2rem;
+            background-color: gray;
+
+            input {
+                background-color: transparent;
+                border: none;
+                outline: none;
+                color: $lightgray;
+                cursor: pointer;
+
+                &::placeholder {
+                    color: $lightgray;
+                    background-color: transparent;
+                }
+            }
+
+        }
+        .button_join {
+            padding: 0.5rem;
+            background-color: $orange;
+            color: white;
+            border: none;
+        }
+    }
+}
+
+@media screen and (max-width: 786px) {
+    .join  {
+        gap: 2rem;
+        flex-direction: column;
+        .email {
+            margin: 0 2rem;
+        }
+    }
+}

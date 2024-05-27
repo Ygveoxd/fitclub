@@ -1,0 +1,40 @@
+@import '../../scss/vars';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        width: 10rem;
+        height: 3rem;
+    }
+
+    .header__menu {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        color: white;
+
+        li:hover {
+            color: $orange;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header__menu {
+        position: fixed;
+        right: 2rem;
+        z-index: 99;
+        flex-direction: column;
+        background-color: $appColor;
+        padding: 2rem;
+    }
+
+    .header { 
+        span {
+            text-align: end;
+        }
+    }
+}

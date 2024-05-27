@@ -1,0 +1,109 @@
+@import '../../scss/vars';
+
+.testimonials {
+    display: flex;
+    gap: 1rem;
+    padding: 0 2rem;
+
+    .left_testimonials {
+        display: flex;
+        flex: 1 1;
+        gap: 2rem;
+        flex-direction: column;
+        text-transform: uppercase;
+        color: white;
+
+        :nth-child(1) {
+            color: $orange;
+            font-weight: bold;
+        }
+        :nth-child(2), :nth-child(3) {
+            font-weight: bold;
+            font-size: 3rem;
+        }
+        :nth-child(4) {
+            text-transform: none;
+            text-align: justify;
+            letter-spacing: 2px;
+            line-height: 40px;
+        }
+    }
+
+    .right_testimonials {
+        flex: 1;
+        position: relative;
+
+        .photo {
+            position: absolute;
+            width: 17rem;
+            height: 20rem;
+            object-fit: cover;
+            right: 8rem;
+            top: 2rem;
+        }
+
+        .backgroundBorder {
+            position: absolute;
+            width: 17rem;
+            height: 20rem;
+            border: 2px solid $orange;
+            background-color: transparent;
+            right: 9rem;
+            top: 0.9rem;
+        }
+
+        .backgroundFill {
+            position: absolute;
+            width: 17rem;
+            height: 19rem;
+            top: 4rem;
+            right: 7rem;
+            background: $planCard;
+        }
+
+        .arrows {
+            display: flex;
+            gap: 1rem;
+            position: absolute;
+            bottom: 1rem;
+            left: 3rem;
+
+            img {
+                width: 1.5rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 786px) {
+    .testimonials {
+        flex-direction: column;
+    
+
+        .right_testimonials {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+
+            div {
+                position: relative;
+                display: none;
+            }
+
+            .photo {
+                position: relative;
+                width: 17rem;
+                height: 20rem;
+                right: 0;
+                top: 0;
+            }
+
+            .arrows {
+               position: static;
+            }
+        }
+    }
+}
